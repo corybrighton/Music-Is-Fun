@@ -1,0 +1,10 @@
+body{
+    background-image: url("https://www.gymcheb.cz/wp-content/uploads/2017/12/6358748036944186621892622963_music.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.clearspace{
+  height: 200px;
+}

@@ -6,12 +6,33 @@ const itunesService = new ItunesService()
 
 function drawSongs(results) {
   console.log(results)
-  //YOUR CODING STARTS HERE
-
-
-
+  let template = ""
+  results.forEach(song => {
+    template +=
+      `
+    <div class="col-3 card text-white bg-info d-flex justify-content-center pt-1 mt-3">
+                <img src="${song.albumArt}">
+                <div class="row">
+                    <div class="col-3 d-flex align-items-center">
+                    <button type="button" class="btn btn-light" onclick="app.controllers.itunesCtrl.play('${song.preview}')">
+                    <i class="fas fa-play-circle fa-2x"></i>
+                    </button>                        
+                    </div>
+                    <div class="col-9 text-center">
+                        <h5>${song.artist}"</h5>
+                        <p>${song.title}</p>
+                        <p>$${song.price}</p>
+                    </div>
+                </div>
+            </div>`
+  });
+  document.getElementById("songs").innerHTML = template
 }
 
+function playMusic(song) {
+  document.getElementById("playSong").innerHTML =
+    `<audio controls src="${song}"></audio>`
+}
 
 //PUBLIC
 class ItunesController {
@@ -28,6 +49,9 @@ class ItunesController {
     })
   }
 
+  play(song) {
+    playMusic(song)
+  }
 
 }
 
