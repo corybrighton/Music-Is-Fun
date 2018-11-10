@@ -31,7 +31,7 @@ function drawSongs(results) {
 
 function playMusic(song) {
   document.getElementById("playSong").innerHTML =
-    `<audio controls src="${song}"></audio>`
+    `<audio controls autoplay src="${song}"></audio>`
 }
 
 //PUBLIC
