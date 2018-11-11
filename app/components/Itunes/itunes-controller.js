@@ -10,7 +10,7 @@ function drawSongs(results) {
   results.forEach(song => {
     template +=
       `
-    <div class="col-3 card text-white bg-info d-flex justify-content-center pt-1 mt-3">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 card text-white bg-info d-flex justify-content-center pt-1 mt-3">
                 <img src="${song.albumArt}">
                 <div class="row">
                     <div class="col-3 d-flex align-items-center">
@@ -19,7 +19,7 @@ function drawSongs(results) {
                     </button>                        
                     </div>
                     <div class="col-9 text-center">
-                        <h5>${song.artist}"</h5>
+                        <h5>${song.artist}</h5>
                         <p>${song.title}</p>
                         <p>$${song.price}</p>
                     </div>
